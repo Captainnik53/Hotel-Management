@@ -1,0 +1,201 @@
+<div class="container" >
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header" style="text-align: center; font-size:20px;">Family Head Details</div>
+                <div class="card-body">
+
+                    <form class="form-horizontal form1" [formGroup]="form1" (ngSubmit)="submitForm1()">
+
+                        <div class="form-group">
+                            <label for="name" class="cols-sm-2 control-label">First Name</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                           
+                                    <input type="text" [formControlName]="'headfname'" class="form-control" name="head_fname" placeholder="Enter your First Name"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="cols-sm-2 control-label">Last Name</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    
+                                    <input type="text" [formControlName]="'headlname'"class="form-control" name="head_lname"  placeholder="Enter your last name" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Email</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    
+                                    <input type="text" [formControlName]="'heademail'" class="form-control" name="head_email"  placeholder="Enter your Email-id"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">Age</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                              
+                                    <input type="number"  [formControlName]="'headage'" class="form-control" name="head_age"  placeholder="Enter your Age" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm" class="cols-sm-2 control-label">Phone Number</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    
+                                    <input type="number"  [formControlName]="'headphone'"class="form-control" name="head_phone"  placeholder="Enter your Phone Number"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm" class="cols-sm-2 control-label">Number of child</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    
+                                    <input type="number" [formControlName]="'childnum'" class="form-control" name="no_child" placeholder="Enter number of children" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm" class="cols-sm-2 control-label">Address</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    
+                                    <textarea class="form-control" [formControlName]="'address'" name="address"  placeholder="Enter your Address" ></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <button type="button" [disabled]="!form1.valid"  class="btn btn-primary btn-md submit-button">Submit</button>
+                        </div>
+                       
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        
+        
+        
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header" style="text-align: center; font-size:20px;">Spouse Details</div>
+                <div class="card-body">
+
+                    <form class="form-horizontal form2"  [formGroup]="form2" (ngSubmit)="submitForm2()">
+
+                        <div class="form-group">
+                            <label for="name" class="cols-sm-2 control-label">First Name</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                           
+                                    <input type="text" [formControlName]="'spousefname'" class="form-control" name="spouse_fname"  placeholder="Enter your First Name" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="cols-sm-2 control-label">Last Name</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    
+                                    <input type="text" [formControlName]="'spouselname'" class="form-control" name="spouse_lname" placeholder="Enter your last name" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Email</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    
+                                    <input type="text" [formControlName]="'spouseemail'" class="form-control" name="spouse_email"  placeholder="Enter your Email-id"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">Age</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                              
+                                    <input type="number" [formControlName]="'spouseage'" class="form-control" name="spouse_age"  placeholder="Enter your Age" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm" class="cols-sm-2 control-label">Phone Number</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    
+                                    <input type="number" [formControlName]="'spousephone'" class="form-control" name="spouse_phone"  placeholder="Enter your Phone Number"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group ">
+                            <button type="button"  [disabled]="!form2.valid"  class="btn btn-primary btn-md submit-button2">Submit</button>
+                        </div>
+                       
+                    </form>
+                </div>
+            </div>
+    </div>
+                
+                
+                <div class="col-md-4">
+                    <div class="card">
+                <div class="card-header" style="text-align: center; font-size:20px;">Children Details</div>
+                <div class="card-body">
+
+                    <form class="form-horizontal form3" [formGroup]="form3" (ngSubmit)="submitForm3()" >
+
+                        <div class="form-group">
+                            <label for="name" class="cols-sm-2 control-label">Number of children(below 10 age)</label> 
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                           
+                                    <input type="number" [formControlName]="'numchild'" class="form-control" name="child_num" placeholder="Enter number of children" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="cols-sm-2 control-label">Name</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    
+                                    <input type="text" class="form-control" name="name3" placeholder="Enter your Child name" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">Age of your child</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                              
+                                    <input type="number" class="form-control" name="age3" placeholder="Enter your Child's Age" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="form-group ">
+                            <button type="button" [disabled]="!form3.valid" class="btn btn-primary btn-md submit-button3">Submit</button>
+                        </div>
+                       
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>

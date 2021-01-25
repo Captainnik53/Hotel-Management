@@ -1,0 +1,37 @@
+<html>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+       
+          <div class="col-md-12 text-center">
+            <h1><span class="badge badge-secondary">Sample App</span></h1>
+          </div>
+          <br><br>
+              <div class="col-md-12 mb-3">
+                <p class="text-center">
+                <a href="" class="google btn btn-success btn-block">
+                <i class="fa fa-google-plus">
+                </i> Signup using <b>Google</b>
+                </a>
+                </p>
+              </div>
+
+              <div class="col-md-12">
+                <p class="text-center">
+                <span class="span-or">or</span></p>
+              </div>
+        <form [formGroup]="form" (ngSubmit)="submitForm()" class="form-group">
+          <label for="email">Email Address: </label> 
+          <input type="text" [formControlName]="'username'" class="form-control" name="username" placeholder="Enter your username here"><br><br>
+          <label for="email">Password: </label>
+          <input type="password" [formControlName]="'password'" class="form-control" name="password" placeholder="Enter your password here"><br><br>
+          <button [disabled]="!form.valid" class= "submit-button btn btn-primary btn-block">Login</button><br>
+					<div class="col-md-12">
+						<a href="" class="float-left text-primary">Forgot Password?</a>
+					</div>     
+        </form>
+      </div>
+
+    </div>
+  </div>
+</html>
